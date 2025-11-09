@@ -17,7 +17,7 @@ namespace PIzzaDeliveryAPI.Controllers
             _context = context;
         }
 
-        // GET api/pizza
+        
         [HttpGet("get_pizza")]
         public async Task<IActionResult> GetPizzas()
         {
@@ -80,3 +80,4 @@ namespace PIzzaDeliveryAPI.Controllers
         }
     }
 }
+
