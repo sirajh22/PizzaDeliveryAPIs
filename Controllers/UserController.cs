@@ -16,7 +16,7 @@ namespace PIzzaDeliveryAPI.Controllers
             _context = context;
         }
 
-        //get:api/user
+
         [HttpGet]
         public async Task<IActionResult>GetUsers()
         {
@@ -24,7 +24,7 @@ namespace PIzzaDeliveryAPI.Controllers
             return Ok(users);
         }
 
-        //get:api/user/2(get one user)
+    
         [HttpGet("{id}")]
         public async Task<IActionResult>GetUser(int id)
         {
@@ -33,7 +33,7 @@ namespace PIzzaDeliveryAPI.Controllers
                 return NotFound("invalid used id");
             return Ok(user);
         }
-        //post:api/user
+      
         [HttpPost]
         public async Task<ActionResult<UserDto>> CreateUser(CreateUserDto dto)
         {
@@ -68,7 +68,7 @@ namespace PIzzaDeliveryAPI.Controllers
             return Ok("Successfully Updated");
 
         }
-        //delete:api/user
+       
         [HttpDelete("{id}")]
         public async Task<IActionResult>DeleteUser(int id)
         {
@@ -81,3 +81,4 @@ namespace PIzzaDeliveryAPI.Controllers
         }
     }
 }
+
