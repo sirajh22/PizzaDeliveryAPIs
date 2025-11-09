@@ -16,7 +16,7 @@ namespace PizzaDeliveryAPI.Controllers
             _context = context;
         }
 
-        // 📌 Get all orders
+     
         [HttpGet]
         public async Task<IActionResult> GetOrders()
         {
@@ -37,7 +37,7 @@ namespace PizzaDeliveryAPI.Controllers
             return Ok(response);
         }
 
-        // 📌 Get one order
+     
         [HttpGet("{id}")]
         public async Task<IActionResult> GetOrder(int id)
         {
@@ -61,7 +61,7 @@ namespace PizzaDeliveryAPI.Controllers
             return Ok(response);
         }
 
-        // 📌 Create new order
+       
         [HttpPost]
         public async Task<ActionResult<OrderDto>>CreateOrder(CreateOrderDto dto)
         {
@@ -89,7 +89,7 @@ namespace PizzaDeliveryAPI.Controllers
 
             return CreatedAtAction(nameof(GetOrder), new { id = order.Id }, response);
         }
-        //delete:api/order/{id}
+
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteOrder(int id)
         {
@@ -103,6 +103,7 @@ namespace PizzaDeliveryAPI.Controllers
     }
 }
     
+
 
 
      
